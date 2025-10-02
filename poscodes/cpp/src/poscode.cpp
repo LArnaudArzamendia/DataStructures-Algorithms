@@ -1,16 +1,11 @@
 #include "poscode.hpp"
 
-    Poscode::Poscode():data(""){
-        
-    }
-    Poscode::Poscode(std::string _data) : data(_data){
+Poscode::Poscode():data(""){}
+Poscode::Poscode(std::string _data) : data(_data){}
+char Poscode::getValue(size_t i){
+    return data[i];
+}
 
-    }
-    char Poscode::getValue(size_t i){
-        return data[i];
-    }
-
-    const std::string &Poscode::getData(){
-        return data;
-    }
-
+const std::string &Poscode::getData(){
+    return data;
+}

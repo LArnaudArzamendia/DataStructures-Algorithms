@@ -2,7 +2,6 @@ import numpy  as np
 import random
 import string
 
-
 A = np.random.randint(0,9, (500000,4))
 
 codes = [ str(code[0]) +
