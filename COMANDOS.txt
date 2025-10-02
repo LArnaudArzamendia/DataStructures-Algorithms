@@ -1,0 +1,26 @@
+- GENERAR codes_X:
+py -3 .\python\generate_codes.py 500000 .\codes_500K.txt
+py -3 .\python\generate_codes.py 1000000 .\codes_1M.txt
+py -3 .\python\generate_codes.py 10000000 .\codes_10M.txt
+
+- COMPILAR:
+CMNT -> Crear build si no existe
+mkdir build
+
+CMNT -> Compilar los .cpp de la lib a .o
+g++ -std=c++11 -O3 -DNDEBUG -I cpp/include -c cpp/src/poscode.cpp -o build/poscode.o
+g++ -std=c++11 -O3 -DNDEBUG -I cpp/include -c cpp/src/utils.cpp   -o build/utils.o
+
+CMNT -> Linkear el ejecutable de pruebas
+g++ -std=c++11 -O3 -DNDEBUG -I cpp/include build/poscode.o build/utils.o cpp/test.cpp  -o build/test.exe
+
+CMNT -> Linkear el ejecutable de benchmarks
+g++ -std=c++11 -O3 -DNDEBUG -I cpp/include build/poscode.o build/utils.o cpp/bench.cpp -o build/bench.exe
+
+
+- EJECUTAR:
+> Dede poscodes/build
+./test
+./bench ../codes_500K.txt 500000
+./bench ../codes_1M.txt 1000000
+./bench ../codes_10M.txt 10000000

@@ -1,3 +1,0 @@
-/home/jmsaavedrar/Research/git/eda_cpp_full/poscodes/cpp/build/CMakeFiles/test.dir
-/home/jmsaavedrar/Research/git/eda_cpp_full/poscodes/cpp/build/CMakeFiles/edit_cache.dir
-/home/jmsaavedrar/Research/git/eda_cpp_full/poscodes/cpp/build/CMakeFiles/rebuild_cache.dir

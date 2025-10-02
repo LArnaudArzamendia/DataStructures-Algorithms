@@ -4,7 +4,7 @@
 #include <iostream>
 
 int main(int nargs, char** vargs){
-    std::string strfile("/home/jmsaavedrar/Research/git/eda_cpp_full/poscodes/codes_500K.txt");
+    std::string strfile("../codes_500K.txt");
     size_t n = 500000;
     Poscode *data = readCodes(strfile, n);
     for(size_t i = 0; i <  10; i++){        
